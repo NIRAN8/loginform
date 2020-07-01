@@ -6,7 +6,7 @@
     "rxjs": "6.1.0",
     "core-js": "2.5.5",
     "zone.js": "0.8.26",
-    "bootstrap": "3.3.7",
+    "bootstrap": "3.4.1",
     "rxjs-compat": "6.1.0",
     "@angular/core": "6.0.0",
     "ngx-bootstrap": "2.0.5",
