@@ -1,0 +1,27 @@
+  
+  <div class="col-xs-12">
+   <form (ngSubmit)="onLogin()" #check="ngForm">
+  <div class="form-group">
+     
+        <label> Mail-Id</label>
+        <input type="text" class="form-control" required email ngModel name="email" #email="ngModel">
+        <span class="help-block" *ngIf="!email.valid && email.touched" style="color:red">Please enter a valid email! </span>
+        </div>
+          <div class="form-group">
+        <label> Password</label>
+        <input type="password" class="form-control" required ngModel name="password" #password="ngModel">
+        <span class="help-block" *ngIf="!password.valid && password.touched" style="color:red">Please enter password! </span>
+          </div>
+            <div class="form-group">
+         <label> Subcription</label>
+        <select class="form-control" [ngModel]="selectedSubcriptions" name="subscription">
+          <option *ngFor="let sub of subcriptions" [value]="sub"> {{ sub }}</option>
+        </select>
+            </div>
+        <div class="form-group">
+          <button class="btn btn-primary" type="submit" [disabled]="!check.valid"> Login </button>
+        </div>      
+       
+      </form>
+       </div>
+  
